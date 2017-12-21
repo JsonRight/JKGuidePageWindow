@@ -625,7 +625,7 @@
         [self btnAction:nil];
         return;
     }else if(self.timeMax>0&&self.timeMax != timerCount){
-        [self.countdownBtn setTitle:[NSString stringWithFormat:@"%ld%@",self.timeMax-timerCount,self.timerTitle] forState:(UIControlStateNormal)];
+        [self.countdownBtn setTitle:[NSString stringWithFormat:@"%d%@",(int)(self.timeMax-timerCount),self.timerTitle] forState:(UIControlStateNormal)];
     }
     if (self.timeDelay>0) {
         self.countdownBtn.hidden=NO;
