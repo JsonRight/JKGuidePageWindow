@@ -1,11 +1,11 @@
 Pod::Spec.new do |s|
 s.name        = "JKGuidePageWindow"
-s.version     = "1.0.1"
+s.version     = "1.0.2"
 s.authors     = { "MissRight" => "rightjson@gmail.com" }
 s.homepage    = "https://github.com/JsonRight/JKGuidePageWindow.git"
 s.summary     = "The APP start page."
 s.source      = { :git => "https://github.com/JsonRight/JKGuidePageWindow.git",
-:tag => "1.0.1" }
+:tag => "1.0.2" }
 s.license     = { :type => "MIT", :file => "LICENSE" }
  
 s.platform = :ios, "7.0"
