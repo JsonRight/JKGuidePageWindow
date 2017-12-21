@@ -13,14 +13,14 @@
 		040C94411FEB7BD7005727A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 040C94401FEB7BD7005727A7 /* Assets.xcassets */; };
 		040C94441FEB7BD7005727A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 040C94421FEB7BD7005727A7 /* LaunchScreen.storyboard */; };
 		040C94471FEB7BD7005727A7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 040C94461FEB7BD7005727A7 /* main.m */; };
-		040C945B1FEB7C1A005727A7 /* JK_WKScriptMessageHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 040C944F1FEB7C1A005727A7 /* JK_WKScriptMessageHandler.m */; };
-		040C945C1FEB7C1A005727A7 /* JKGuidePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040C94521FEB7C1A005727A7 /* JKGuidePageViewController.m */; };
-		040C945D1FEB7C1A005727A7 /* JKGuidePageWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 040C94541FEB7C1A005727A7 /* JKGuidePageWindow.m */; };
-		040C945E1FEB7C1A005727A7 /* JKUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 040C94561FEB7C1A005727A7 /* JKUtility.m */; };
-		040C945F1FEB7C1A005727A7 /* NSObject+SelectorExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 040C94581FEB7C1A005727A7 /* NSObject+SelectorExtension.m */; };
 		040C94641FEB8D3C005727A7 /* ggg.gif in Resources */ = {isa = PBXBuildFile; fileRef = 040C94611FEB8D3B005727A7 /* ggg.gif */; };
 		040C94651FEB8D3C005727A7 /* 1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 040C94621FEB8D3B005727A7 /* 1.mp4 */; };
 		040C94661FEB8D3C005727A7 /* ajaxHtml.html in Resources */ = {isa = PBXBuildFile; fileRef = 040C94631FEB8D3B005727A7 /* ajaxHtml.html */; };
+		040C94731FEBA11E005727A7 /* JK_WKScriptMessageHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 040C94691FEBA11E005727A7 /* JK_WKScriptMessageHandler.m */; };
+		040C94741FEBA11E005727A7 /* JKGuidePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040C946C1FEBA11E005727A7 /* JKGuidePageViewController.m */; };
+		040C94751FEBA11E005727A7 /* JKGuidePageWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 040C946E1FEBA11E005727A7 /* JKGuidePageWindow.m */; };
+		040C94761FEBA11E005727A7 /* JKUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 040C94701FEBA11E005727A7 /* JKUtility.m */; };
+		040C94771FEBA11E005727A7 /* NSObject+SelectorExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 040C94721FEBA11E005727A7 /* NSObject+SelectorExtension.m */; };
 		11A04C5A06EFDBF85A62E427 /* libPods-JKGuidePageWindow.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B73A2BE653648DADD27205BD /* libPods-JKGuidePageWindow.a */; };
 /* End PBXBuildFile section */
 
@@ -35,20 +35,20 @@
 		040C94431FEB7BD7005727A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		040C94451FEB7BD7005727A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		040C94461FEB7BD7005727A7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		040C944E1FEB7C1A005727A7 /* JK_WKScriptMessageHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JK_WKScriptMessageHandler.h; sourceTree = "<group>"; };
-		040C944F1FEB7C1A005727A7 /* JK_WKScriptMessageHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JK_WKScriptMessageHandler.m; sourceTree = "<group>"; };
-		040C94501FEB7C1A005727A7 /* JKGuidePage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKGuidePage.h; sourceTree = "<group>"; };
-		040C94511FEB7C1A005727A7 /* JKGuidePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKGuidePageViewController.h; sourceTree = "<group>"; };
-		040C94521FEB7C1A005727A7 /* JKGuidePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKGuidePageViewController.m; sourceTree = "<group>"; };
-		040C94531FEB7C1A005727A7 /* JKGuidePageWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKGuidePageWindow.h; sourceTree = "<group>"; };
-		040C94541FEB7C1A005727A7 /* JKGuidePageWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKGuidePageWindow.m; sourceTree = "<group>"; };
-		040C94551FEB7C1A005727A7 /* JKUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKUtility.h; sourceTree = "<group>"; };
-		040C94561FEB7C1A005727A7 /* JKUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKUtility.m; sourceTree = "<group>"; };
-		040C94571FEB7C1A005727A7 /* NSObject+SelectorExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SelectorExtension.h"; sourceTree = "<group>"; };
-		040C94581FEB7C1A005727A7 /* NSObject+SelectorExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SelectorExtension.m"; sourceTree = "<group>"; };
 		040C94611FEB8D3B005727A7 /* ggg.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = ggg.gif; sourceTree = "<group>"; };
 		040C94621FEB8D3B005727A7 /* 1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 1.mp4; sourceTree = "<group>"; };
 		040C94631FEB8D3B005727A7 /* ajaxHtml.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ajaxHtml.html; sourceTree = "<group>"; };
+		040C94681FEBA11E005727A7 /* JK_WKScriptMessageHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JK_WKScriptMessageHandler.h; sourceTree = "<group>"; };
+		040C94691FEBA11E005727A7 /* JK_WKScriptMessageHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JK_WKScriptMessageHandler.m; sourceTree = "<group>"; };
+		040C946A1FEBA11E005727A7 /* JKGuidePage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKGuidePage.h; sourceTree = "<group>"; };
+		040C946B1FEBA11E005727A7 /* JKGuidePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKGuidePageViewController.h; sourceTree = "<group>"; };
+		040C946C1FEBA11E005727A7 /* JKGuidePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKGuidePageViewController.m; sourceTree = "<group>"; };
+		040C946D1FEBA11E005727A7 /* JKGuidePageWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKGuidePageWindow.h; sourceTree = "<group>"; };
+		040C946E1FEBA11E005727A7 /* JKGuidePageWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKGuidePageWindow.m; sourceTree = "<group>"; };
+		040C946F1FEBA11E005727A7 /* JKUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKUtility.h; sourceTree = "<group>"; };
+		040C94701FEBA11E005727A7 /* JKUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKUtility.m; sourceTree = "<group>"; };
+		040C94711FEBA11E005727A7 /* NSObject+SelectorExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SelectorExtension.h"; sourceTree = "<group>"; };
+		040C94721FEBA11E005727A7 /* NSObject+SelectorExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SelectorExtension.m"; sourceTree = "<group>"; };
 		60174276766353FF43220381 /* Pods-JKGuidePageWindow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JKGuidePageWindow.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JKGuidePageWindow/Pods-JKGuidePageWindow.debug.xcconfig"; sourceTree = "<group>"; };
 		7A0C264789F1A4D7A6734C82 /* Pods-JKGuidePageWindow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JKGuidePageWindow.release.xcconfig"; path = "Pods/Target Support Files/Pods-JKGuidePageWindow/Pods-JKGuidePageWindow.release.xcconfig"; sourceTree = "<group>"; };
 		B73A2BE653648DADD27205BD /* libPods-JKGuidePageWindow.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JKGuidePageWindow.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,10 +87,10 @@
 		040C94361FEB7BD7005727A7 /* JKGuidePageWindow */ = {
 			isa = PBXGroup;
 			children = (
+				040C94671FEBA11E005727A7 /* JKGuidePage */,
 				040C94621FEB8D3B005727A7 /* 1.mp4 */,
 				040C94631FEB8D3B005727A7 /* ajaxHtml.html */,
 				040C94611FEB8D3B005727A7 /* ggg.gif */,
-				040C944D1FEB7C1A005727A7 /* JKGuidePage */,
 				040C94371FEB7BD7005727A7 /* AppDelegate.h */,
 				040C94381FEB7BD7005727A7 /* AppDelegate.m */,
 				040C943A1FEB7BD7005727A7 /* ViewController.h */,
@@ -104,23 +104,23 @@
 			path = JKGuidePageWindow;
 			sourceTree = "<group>";
 		};
-		040C944D1FEB7C1A005727A7 /* JKGuidePage */ = {
+		040C94671FEBA11E005727A7 /* JKGuidePage */ = {
 			isa = PBXGroup;
 			children = (
-				040C94551FEB7C1A005727A7 /* JKUtility.h */,
-				040C94561FEB7C1A005727A7 /* JKUtility.m */,
-				040C94571FEB7C1A005727A7 /* NSObject+SelectorExtension.h */,
-				040C94581FEB7C1A005727A7 /* NSObject+SelectorExtension.m */,
-				040C944E1FEB7C1A005727A7 /* JK_WKScriptMessageHandler.h */,
-				040C944F1FEB7C1A005727A7 /* JK_WKScriptMessageHandler.m */,
-				040C94511FEB7C1A005727A7 /* JKGuidePageViewController.h */,
-				040C94521FEB7C1A005727A7 /* JKGuidePageViewController.m */,
-				040C94531FEB7C1A005727A7 /* JKGuidePageWindow.h */,
-				040C94541FEB7C1A005727A7 /* JKGuidePageWindow.m */,
-				040C94501FEB7C1A005727A7 /* JKGuidePage.h */,
+				040C94681FEBA11E005727A7 /* JK_WKScriptMessageHandler.h */,
+				040C94691FEBA11E005727A7 /* JK_WKScriptMessageHandler.m */,
+				040C946A1FEBA11E005727A7 /* JKGuidePage.h */,
+				040C946B1FEBA11E005727A7 /* JKGuidePageViewController.h */,
+				040C946C1FEBA11E005727A7 /* JKGuidePageViewController.m */,
+				040C946D1FEBA11E005727A7 /* JKGuidePageWindow.h */,
+				040C946E1FEBA11E005727A7 /* JKGuidePageWindow.m */,
+				040C946F1FEBA11E005727A7 /* JKUtility.h */,
+				040C94701FEBA11E005727A7 /* JKUtility.m */,
+				040C94711FEBA11E005727A7 /* NSObject+SelectorExtension.h */,
+				040C94721FEBA11E005727A7 /* NSObject+SelectorExtension.m */,
 			);
 			path = JKGuidePage;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		9CDD77F737C7515DF60FEF41 /* Frameworks */ = {
 			isa = PBXGroup;
@@ -267,13 +267,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				040C945F1FEB7C1A005727A7 /* NSObject+SelectorExtension.m in Sources */,
-				040C945B1FEB7C1A005727A7 /* JK_WKScriptMessageHandler.m in Sources */,
+				040C94771FEBA11E005727A7 /* NSObject+SelectorExtension.m in Sources */,
+				040C94731FEBA11E005727A7 /* JK_WKScriptMessageHandler.m in Sources */,
 				040C943C1FEB7BD7005727A7 /* ViewController.m in Sources */,
-				040C945C1FEB7C1A005727A7 /* JKGuidePageViewController.m in Sources */,
-				040C945E1FEB7C1A005727A7 /* JKUtility.m in Sources */,
+				040C94741FEBA11E005727A7 /* JKGuidePageViewController.m in Sources */,
+				040C94761FEBA11E005727A7 /* JKUtility.m in Sources */,
 				040C94471FEB7BD7005727A7 /* main.m in Sources */,
-				040C945D1FEB7C1A005727A7 /* JKGuidePageWindow.m in Sources */,
+				040C94751FEBA11E005727A7 /* JKGuidePageWindow.m in Sources */,
 				040C94391FEB7BD7005727A7 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
