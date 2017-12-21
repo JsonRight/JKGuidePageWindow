@@ -359,7 +359,11 @@
     return ^(CGRect frame, NSURL *url){
         if (url) {
             self.webUrl = url;
-            [self.webView setFrame:frame];
+            if(frame.size.height != 0.0&&frame.size.width != 0.0){
+                self.webView.frame = frame;
+            }else{
+                self.webView.frame = self.view.bounds;
+            }
             self.backGroundImageView.hidden = NO;
             NSURLRequest *request = [NSURLRequest requestWithURL:url];
             [self.webView loadRequest:request];
