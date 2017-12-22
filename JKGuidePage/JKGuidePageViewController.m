@@ -32,9 +32,9 @@
 
 @interface JKGuidePageViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,WKUIDelegate,WKNavigationDelegate>
 /**计时时间*/
-@property (nonatomic, assign) NSInteger timeMax;
+@property (nonatomic, assign) NSUInteger timeMax;
 /**计时时间*/
-@property (nonatomic, assign) NSInteger timeDelay;
+@property (nonatomic, assign) NSUInteger timeDelay;
 
 /**是否纵向滚动*/
 @property (nonatomic,assign) BOOL scrollDirectionVertical;//default is NO
@@ -150,7 +150,7 @@
         [self.customView addSubview:self.centerBtn];
         [self.customView addSubview:self.countdownBtn];
     }
-
+    
     if ((self.options & JKGetAppLaunchState())) {
         [[JKGuidePageWindow sheareGuidePageWindow] show];
         if (!(self.imageArr.count>0 || self.webUrl.absoluteString.length>0 || self.avAset)) {
@@ -164,7 +164,7 @@
         _timer = [[NSTimer alloc]initWithFireDate:[NSDate dateWithTimeIntervalSinceNow:self.timeDelay] interval:1 target:self selector:@selector(doSomething:) userInfo:nil repeats:YES];
         [[NSRunLoop currentRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
     }
-
+    
 }
 
 - (NSMutableArray *)imageArr{
@@ -286,7 +286,7 @@
     return _options;
 }
 - (TimerBlock)setTimer{
-    return ^(NSInteger timeMax,NSInteger timeDelay,NSString* timerTitle){
+    return ^(NSUInteger timeMax,NSUInteger timeDelay,NSString* timerTitle){
         self.timeMax = timeMax;
         self.timeDelay = timeDelay;
         self.timerTitle = timerTitle;
@@ -444,7 +444,7 @@
                 [cell.imageView setImage:[UIImage sd_animatedGIFWithData:data]];
             }];
         }else{
-           [cell.imageView sd_setImageWithURL:[NSURL URLWithString:self.imageArr[indexPath.item]] placeholderImage:[UIImage imageNamed:JKGetLaunchImageName()]];
+            [cell.imageView sd_setImageWithURL:[NSURL URLWithString:self.imageArr[indexPath.item]] placeholderImage:[UIImage imageNamed:JKGetLaunchImageName()]];
         }
     }else if (self.isGif&&self.imageArr.count>indexPath.item&&self.imageArr[indexPath.item]){
         
@@ -458,7 +458,7 @@
         }
         JKDlog(@"本地gif");
         [cell.imageView setImage:image?image:[UIImage imageNamed:JKGetLaunchImageName()]];
-
+        
         
     }else if(self.imageArr.count>indexPath.item&&self.imageArr[indexPath.item]){
         JKDlog(@"本地图片");
@@ -500,7 +500,7 @@
 }
 // 页面加载完成之后调用
 - (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation{
- 
+    
     JKDlog(@"加载成功");
     self.webView.hidden =NO;
     [self addTimer];
@@ -510,7 +510,7 @@
     JKDlog(@"加载失败");
     self.backGroundImageView.hidden = NO;
     [self addTimer];
- 
+    
 }
 // 接收到服务器跳转请求之后调用
 - (void)webView:(WKWebView *)webView didReceiveServerRedirectForProvisionalNavigation:(WKNavigation *)navigation{
@@ -629,7 +629,7 @@
         [self btnAction:nil];
         return;
     }else if(self.timeMax>0&&self.timeMax != timerCount){
-        [self.countdownBtn setTitle:[NSString stringWithFormat:@"%d%@",(int)(self.timeMax-timerCount),self.timerTitle] forState:(UIControlStateNormal)];
+        [self.countdownBtn setTitle:[NSString stringWithFormat:@"%ld%@",self.timeMax-timerCount,self.timerTitle] forState:(UIControlStateNormal)];
     }
     if (self.timeDelay>0) {
         self.countdownBtn.hidden=NO;
@@ -671,14 +671,15 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 
 @end
+

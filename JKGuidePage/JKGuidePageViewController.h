@@ -13,7 +13,7 @@
 
 typedef JKGuidePageViewController *(^BackGroundImageBlock)(NSString *url,BOOL isURL,BOOL isGif);
 
-typedef JKGuidePageViewController *(^TimerBlock)(NSInteger timeMax,NSInteger timeDelay,NSString* timerTitle);
+typedef JKGuidePageViewController *(^TimerBlock)(NSUInteger timeMax,NSUInteger timeDelay,NSString* timerTitle);
 typedef JKGuidePageViewController *(^ImageArrBlock)(NSArray *imageArr,BOOL isURL,BOOL isGif);
 typedef JKGuidePageViewController *(^ScrollViewStyleBlock)(UICollectionViewFlowLayout *layout,CGRect frame,CGSize itemSize,BOOL scrollDirectionVertical);
 typedef JKGuidePageViewController *(^WKWebViewBlock)(CGRect frame, NSURL *url);
@@ -133,3 +133,4 @@ typedef JKGuidePageViewController *(^SetAPPLaunchStateOptions)(APPLaunchStateOpt
 - (void)reloadData;
 
 @end
+
