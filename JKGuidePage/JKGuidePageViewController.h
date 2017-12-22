@@ -21,7 +21,7 @@ typedef JKGuidePageViewController *(^AVPlayerBlock)(CGRect frame, NSURL *url);
 
 typedef void (^UploadBtnBlock)(UIButton* btn);
 typedef JKGuidePageViewController *(^SetBtnBlock)(UploadBtnBlock block);
-
+typedef JKGuidePageViewController *(^SetCenterBtnBlock)(BOOL hasCenterBtn, UploadBtnBlock block);
 typedef UIView*(^CreateViewBlock)(void);
 typedef JKGuidePageViewController *(^CustomViewBlock)(CreateViewBlock block);
 
@@ -58,9 +58,10 @@ typedef JKGuidePageViewController *(^SetAPPLaunchStateOptions)(APPLaunchStateOpt
  */
 @property (nonatomic,copy,readonly) SetBtnBlock setCountdownBtnBlock;
 /**设置ismissBtn按钮部分属性
+ hasCenterBtn  是否需要CenterBtn 默认NO
  block btn属性设置
  */
-@property (nonatomic,copy,readonly) SetBtnBlock setCenterBtnBlock;
+@property (nonatomic,copy,readonly) SetCenterBtnBlock setCenterBtnBlock;
 
 /**设置滚动视图相关属性
  layout 滚动视图布局样式

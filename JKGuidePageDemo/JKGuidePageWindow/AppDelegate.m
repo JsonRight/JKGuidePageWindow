@@ -33,16 +33,16 @@
             make.setCountdownBtnBlock(^(UIButton *btn) {
                 //            btn.hidden = NO;
             });
-            //设置中间按钮属性，(默认状态隐藏)
-            make.setCenterBtnBlock(^(UIButton *btn) {
+            //设置中间按钮属性，---是否需要CenterBtn (默认NO)
+            make.setCenterBtnBlock(YES, ^(UIButton *btn) {
                 btn.hidden = NO;
             });
             //设置图片滚动的item属性，（UICollectionView 默认横向滚动：NO）
             make.setScrollViewStyle(nil, CGRectNull, CGSizeZero, NO);
             //设置web'加载，url请转成NSURL
-            //            make.setWKWebView([UIScreen mainScreen].bounds, [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"ajaxHtml" ofType:@"html"]]);
+//                        make.setWKWebView([UIScreen mainScreen].bounds, [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"ajaxHtml" ofType:@"html"]]);
             //设置视频播放器  url请转成NSURL
-            //            make.setAVPlayer(CGRectZero, [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"1" ofType:@"mp4"]]);
+//                        make.setAVPlayer(CGRectZero, [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"1" ofType:@"mp4"]]);
             //设置倒计时按钮点击回调（启动页消失不需在block内处理）
             make.setCountdownBtnActionBlock(^(id info) {
                 JKDlog(@"倒计时按钮事件：%@",info);

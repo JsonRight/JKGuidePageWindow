@@ -61,6 +61,8 @@
 @property (nonatomic, strong) UIButton *countdownBtn;
 /**Btn*/
 @property (nonatomic, strong) UIButton *centerBtn;
+/***/
+@property (nonatomic,assign) BOOL hasCenterBtn;
 
 /**btn默认按钮*/
 @property (nonatomic, strong) NSString *btnTitle;
@@ -115,12 +117,6 @@
             btn.layer.cornerRadius = 20;
         });
     }
-    if (!_centerBtn) {
-        self.setCenterBtnBlock(^(UIButton *btn) {
-            [btn setTitle:@"center" forState:(UIControlStateNormal)];
-        });
-    }
-    
     if (self.avAset) {
         [self.avAset loadValuesAsynchronouslyForKeys:@[@"tracks"] completionHandler:^{
             AVKeyValueStatus stacks=[self.avAset statusOfValueForKey:@"tracks" error:nil];
@@ -133,21 +129,25 @@
                 [player play];
                 dispatch_async(dispatch_get_main_queue(), ^{
                     self.backGroundImageView.hidden = YES;
-                    [self.customView addSubview:self.centerBtn];
+                    if (self.hasCenterBtn) {
+                        [self.customView addSubview:self.centerBtn];
+                    }
+                    
                     [self.customView addSubview:self.countdownBtn];
                     [self addTimer];
                 });
             }else if (stacks==AVKeyValueStatusFailed||stacks==AVKeyValueStatusCancelled){
                 dispatch_async(dispatch_get_main_queue(), ^{
                     self.backGroundImageView.hidden = NO;
-                    [self.customView addSubview:self.centerBtn];
+                    if (self.hasCenterBtn) {
+                        [self.customView addSubview:self.centerBtn];
+                    }
                     [self.customView addSubview:self.countdownBtn];
                     [self addTimer];
                 });
             }
         }];
     }else{
-        [self.customView addSubview:self.centerBtn];
         [self.customView addSubview:self.countdownBtn];
     }
     
@@ -300,8 +300,9 @@
         return self;
     };
 }
-- (SetBtnBlock)setCenterBtnBlock{
-    return ^(UploadBtnBlock block){
+- (SetCenterBtnBlock)setCenterBtnBlock{
+    return ^(BOOL hasCenterBtn, UploadBtnBlock block){
+        self.hasCenterBtn = hasCenterBtn;
         block(self.centerBtn);
         return self;
     };
@@ -467,6 +468,15 @@
     }else{
         [cell.imageView setImage:[UIImage imageNamed:JKGetLaunchImageName()]];
     }
+    
+    if (self.hasCenterBtn) {
+        [cell.contentView addSubview:self.centerBtn];
+        if (self.imageArr.count == indexPath.item+1) {
+            self.centerBtn.hidden = NO;
+        }else{
+            self.centerBtn.hidden = YES;
+        }
+    }
     if (self.imageArr.count==1) {
         [self scrollViewDidScroll:collectionView];
     }
@@ -503,12 +513,18 @@
     
     JKDlog(@"加载成功");
     self.webView.hidden =NO;
+    if (self.hasCenterBtn) {
+        [self.customView addSubview:self.centerBtn];
+    }
     [self addTimer];
 }
 // 页面加载失败时调用
 - (void)webView:(WKWebView *)webView didFailProvisionalNavigation:(WKNavigation *)navigation{
     JKDlog(@"加载失败");
     self.backGroundImageView.hidden = NO;
+    if (self.hasCenterBtn) {
+        [self.customView addSubview:self.centerBtn];
+    }
     [self addTimer];
     
 }
