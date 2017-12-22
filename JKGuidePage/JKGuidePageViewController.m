@@ -32,9 +32,9 @@
 
 @interface JKGuidePageViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,WKUIDelegate,WKNavigationDelegate>
 /**计时时间*/
-@property (nonatomic, assign) NSUInteger timeMax;
+@property (nonatomic, assign) NSInteger timeMax;
 /**计时时间*/
-@property (nonatomic, assign) NSUInteger timeDelay;
+@property (nonatomic, assign) NSInteger timeDelay;
 
 /**是否纵向滚动*/
 @property (nonatomic,assign) BOOL scrollDirectionVertical;//default is NO
@@ -286,7 +286,7 @@
     return _options;
 }
 - (TimerBlock)setTimer{
-    return ^(NSUInteger timeMax,NSUInteger timeDelay,NSString* timerTitle){
+    return ^(NSInteger timeMax,NSInteger timeDelay,NSString* timerTitle){
         self.timeMax = timeMax;
         self.timeDelay = timeDelay;
         self.timerTitle = timerTitle;
