@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name        = "JKGuidePage"
-s.version     = "1.0.0"
+s.version     = "1.0.5"
 s.authors     = { "MissRight" => "rightjson@gmail.com" }
 s.homepage    = "https://github.com/JsonRight/JKGuidePageWindow.git"
 s.summary     = "The APP start page."
