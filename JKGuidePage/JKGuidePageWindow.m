@@ -42,7 +42,7 @@ static JKGuidePageWindow* guidePageWindow=nil;
     if (!guidePageWindow) {
         guidePageWindow = [[JKGuidePageWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
         guidePageWindow.backgroundColor  = [UIColor whiteColor];
-        guidePageWindow.windowLevel = UIWindowLevelNormal+1;
+        guidePageWindow.windowLevel = UIWindowLevelNormal+500;
     }
     return guidePageWindow;
 }
